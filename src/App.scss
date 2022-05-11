@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&display=swap');
+
+$primary-color: #f2753b;
+$second-color: #ebad65;
+$tertiary-color: #000000;
+$primary-font: 'Montserrat';
+$secondary-font: 'Mulish';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+body {
+  background-color: $second-color;
+}
+h4 {
+  font-family: $secondary-font;
+}

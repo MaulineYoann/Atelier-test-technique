@@ -1,0 +1,21 @@
+input {
+  background-color: rgba(0, 0, 0, 30%);
+  border-radius: 10px;
+  height: 40px;
+  width: 500px;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  margin-bottom: 3rem;
+  outline: none;
+  color: #fff;
+  &::placeholder {
+    color: #ebad65;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  input {
+    width: 300px;
+  }
+}
