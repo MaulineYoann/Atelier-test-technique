@@ -131,10 +131,11 @@
           align-self: flex-start;
         }
         .stats {
-          gap: 30px;
-          flex-flow: column nowrap;
+          gap: 20px;
+          flex-flow: column wrap;
           display: flex;
           flex-flow: row wrap;
+          align-self: center;
           height: 100%;
           height: 30%;
           .info {
@@ -147,6 +148,7 @@
           height: 150px;
           width: 100%;
           padding: 0 5%;
+          margin-top: 50px;
           // margin-top: 150px;
           margin-bottom: 0;
           align-self: flex-end;
@@ -185,7 +187,7 @@
           justify-content: flex-start;
           display: flex;
           flex-flow: column nowrap;
-          gap: 0px;
+          gap: 5px;
         }
         .resume {
           margin-top: 30px;
