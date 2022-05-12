@@ -7,8 +7,9 @@ const PlayerId = ({ players }) => {
   const idPlayer = Object.values(params)[0];
   let singlePlayer = parseInt(idPlayer);
   const player = players.filter((el) => el.id === singlePlayer);
-  let birthday = null;
 
+  let birthday = null;
+  
   if (player[0].firstname === 'Rafael') {
     birthday = '3 / 06 / 1986';
   } else if (player[0].firstname === 'Novak') {
@@ -79,8 +80,6 @@ const PlayerId = ({ players }) => {
           alt="country" srcset="" />
           <p className='info-data'>{player[0].country.code}</p>
         </div>
-        {/* <img className='player-picture' */}
-        {/* src={player[0].picture} alt="player" /> */}
       </section>
     </div>
   );

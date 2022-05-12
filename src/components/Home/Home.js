@@ -33,8 +33,7 @@ const Home = ({players}) => {
           </div>
         ))
       }
-      </section>
-      
+      </section>   
     </main>
   );
 };

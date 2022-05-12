@@ -1,9 +1,11 @@
-import Player from "./Player";
-import { render, screen} from '@testing-library/react';
+/* eslint-disable jest/valid-expect */
+/* eslint-disable testing-library/prefer-screen-queries */
+// import Player from "./Player";
+// import { render, screen} from '@testing-library/react';
 
-test('player is not empty', () => {
-    render(<Player players='Novak'/>);
-    const playerElement = screen.getByText('Novak');
-    expect(playerElement).toBeInTheDocument()
-})
+// test('check rank', () => {
+//     const { getByText } = render(<Player />);
+//     const element = getByText('rank');
+//     expect(element.toBeTruthy());
 
+// })

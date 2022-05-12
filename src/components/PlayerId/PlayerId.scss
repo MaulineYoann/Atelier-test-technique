@@ -27,7 +27,7 @@
     .name {
       font-size: 8rem;
       position: absolute;
-      top: 10%;
+      top: 6%;
       left: 12%;
       z-index: 1;
       color: #f2753b;
@@ -39,9 +39,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      // align-items: flex-end;
       height: 100%;
-      // gap: 40px;
       .player-picture {
         object-fit: cover;
         align-self: flex-end;
@@ -49,7 +47,6 @@
         max-width: 300px;
         height: 80%;
         transform: translateX(-70%);
-        border: 2px solid red;
       }
     }
     .stats {
@@ -129,7 +126,6 @@
         gap: 0;
         .player-picture {
           transform: translateX(0);
-          // height: 400px;
           height: 50%;
           align-self: flex-start;
         }
@@ -152,7 +148,6 @@
           width: 100%;
           padding: 0 5%;
           margin-top: 50px;
-          // margin-top: 150px;
           margin-bottom: 0;
           align-self: flex-end;
           justify-self: flex-end;
@@ -172,7 +167,7 @@
   }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 520px) {
   .playerId {
     .player-contain {
       height: 100%;
@@ -181,19 +176,24 @@
         text-align: center;
       }
       .block-info {
+        margin-top: 50px;
         gap: 0;
+        flex-flow: row wrap;
+        justify-content: space-around;
         .player-picture {
           height: 200px;
           width: 100px;
         }
         .stats {
-          justify-content: flex-start;
           display: flex;
           flex-flow: column nowrap;
+          justify-content: flex-start;
           gap: 5px;
+          width: 100%;
         }
         .resume {
-          margin-top: 30px;
+          align-self: center;
+          margin-top: 70px;
           align-items: flex-start;
         }
       }
@@ -208,14 +208,6 @@
         font-size: 2rem;
         letter-spacing: 2px;
       }
-    }
-  }
-}
-@media screen and (max-width: 615px) {
-  .playerId {
-    .player-contain {
-      border: 4px solid red;
-      height: auto;
     }
   }
 }
