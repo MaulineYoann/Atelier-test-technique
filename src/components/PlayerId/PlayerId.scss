@@ -77,16 +77,24 @@
       height: 300px;
       overflow-y: scroll;
       font-size: 1.4rem;
-      font-weight: bold;
       letter-spacing: 1.5px;
       margin-bottom: 70px;
       .info {
+        font-weight: bold;
         color: rgba(0, 0, 0, 30%);
         text-transform: uppercase;
         .info-data {
           padding-top: 7px;
           display: block;
           color: #f2753b;
+          .years {
+            font-weight: bold;
+            padding: 10px 0;
+          }
+          .description {
+            font-size: 1.1rem;
+            font-weight: 400;
+          }
         }
       }
     }
@@ -131,7 +139,6 @@
         }
         .stats {
           gap: 20px;
-          flex-flow: column wrap;
           display: flex;
           flex-flow: row wrap;
           align-self: center;

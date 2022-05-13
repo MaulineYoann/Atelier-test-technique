@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { carrer } from '../../data/carrer';
 import './PlayerId.scss';
 
 const PlayerId = ({ players }) => {
   const params = useParams();
   const idPlayer = Object.values(params)[0];
-  let singlePlayer = parseInt(idPlayer);
+  const singlePlayer = parseInt(idPlayer);
   const player = players.filter((el) => el.id === singlePlayer);
+  const playerCarrer = carrer.filter(el => el.name === player[0].firstname)
 
   let birthday = null;
   
@@ -21,6 +23,7 @@ const PlayerId = ({ players }) => {
   } else if (player[0].firstname === 'Serena') {
     birthday = '26 / 09 / 1981'
   }
+
 
   return (
     <div className="playerId">
@@ -66,10 +69,12 @@ const PlayerId = ({ players }) => {
           </div>
           <div className="resume">
             <h4 className="info">
-              carrer titles
+              carrer title
               <span className="info-data">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore aliquam dolorem perspiciatis, sed qui voluptates iusto deserunt quos eligendi dolor voluptatum, laboriosam excepturi rerum natus blanditiis quia officia vel? Neque.
-                Molestias officia eius porro eaque officiis odit vitae. Eum, minus. Eum aliquam molestiae delectus velit voluptatum. Fugiat ullam placeat voluptas molestiae. Ipsam, aut deleniti! Corporis nobis minima necessitatibus tenetur repellendus.
+                <p  className='years'>{playerCarrer[0].palmares.recent.years}</p>
+                <p className='description'>{playerCarrer[0].palmares.recent.description}</p>
+                <p className='years'>{playerCarrer[0].palmares.old.years}</p>
+                <p className='description'>{playerCarrer[0].palmares.old.description}</p>
               </span>
             </h4>
           </div>

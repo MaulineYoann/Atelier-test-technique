@@ -19,7 +19,7 @@ const Home = ({players}) => {
         ? 
         players
         .filter((name) => name.firstname.toLowerCase().includes(searchPlayer))
-        .map((player, index) => (
+        .map((player) => (
           <div className='player-contain' key={player.id} >
             <Player player={player}/>
           </div>
@@ -27,7 +27,7 @@ const Home = ({players}) => {
         :
         players
         .sort((min, max) => min.data.rank - max.data.rank)
-        .map((player, index) => (
+        .map((player) => (
           <div className='player-contain' key={player.id} >
             <Player player={player}/>
           </div>
