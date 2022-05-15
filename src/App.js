@@ -9,6 +9,7 @@ function App() {
   const url = 'https://data.latelier.co/training/tennis_stats/headtohead.json';
   const [players, setPlayers] = useState([]);
 
+  //GET DATA FROM API
   useEffect(() => {
     axios
       .get(url)

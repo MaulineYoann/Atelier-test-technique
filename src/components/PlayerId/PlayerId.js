@@ -1,29 +1,39 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { carrer } from '../../data/carrer';
+import { carrerPlayer } from '../../data/carrer';
 import './PlayerId.scss';
 
 const PlayerId = ({ players }) => {
   const params = useParams();
   const idPlayer = Object.values(params)[0];
   const singlePlayer = parseInt(idPlayer);
-  const player = players.filter((el) => el.id === singlePlayer);
-  const playerCarrer = carrer.filter(el => el.name === player[0].firstname)
+  
+  //CHECK IF THE ID MATCH
+  const player = players.filter(dataPlayer => dataPlayer.id === singlePlayer);  
+
+  //CGET CARRER DATA  OF PLAYERS FROM CARRERPLAYER
+  const carrer = carrerPlayer.filter(dataCarrer => dataCarrer.name === player[0].firstname);
 
   let birthday = null;
-  
-  if (player[0].firstname === 'Rafael') {
-    birthday = '3 / 06 / 1986';
-  } else if (player[0].firstname === 'Novak') {
-    birthday = '22 / 05 / 1987';
-  } else if (player[0].firstname === 'Venus') {
-    birthday = '17 / 06 / 1980';
-  } else if (player[0].firstname === 'Stan') {
-    birthday = '28 / 03 / 1985';
-  } else if (player[0].firstname === 'Serena') {
-    birthday = '26 / 09 / 1981'
+  switch(player[0].firstname) {
+    case 'Rafael': 
+       birthday = '3 / 06 / 1986';
+       break
+    case 'Novak':
+       birthday = '22 / 05 / 1987';
+       break
+    case 'Venus': 
+       birthday = '17 / 06 / 1980';
+       break
+    case 'Stan':
+       birthday = '28 / 03 / 1985';
+       break
+    case 'Serena':
+       birthday = '26 / 09 / 1981';
+       break
+    default:
+      birthday = 'N/C';
   }
-
 
   return (
     <div className="playerId">
@@ -71,10 +81,10 @@ const PlayerId = ({ players }) => {
             <h4 className="info">
               carrer title
               <span className="info-data">
-                <p  className='years'>{playerCarrer[0].palmares.recent.years}</p>
-                <p className='description'>{playerCarrer[0].palmares.recent.description}</p>
-                <p className='years'>{playerCarrer[0].palmares.old.years}</p>
-                <p className='description'>{playerCarrer[0].palmares.old.description}</p>
+                <p  className='years'>{carrer[0].palmares.recent.years}</p>
+                <p className='description'>{carrer[0].palmares.recent.description}</p>
+                <p className='years'>{carrer[0].palmares.old.years}</p>
+                <p className='description'>{carrer[0].palmares.old.description}</p>
               </span>
             </h4>
           </div>

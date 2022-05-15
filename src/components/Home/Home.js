@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Search from '../Search/Search';
 import Player from '../Player/Player';
+import ball from '../../assets/ball.png'
 import './Home.scss';
 
 const Home = ({ players }) => {
@@ -9,6 +10,7 @@ const Home = ({ players }) => {
   return (
     <main className="home">
       <Search searchPlayer={searchPlayer} setSearchPlayer={setSearchPlayer} />
+      <div className="container">
       <section>
         {searchPlayer
           ? players
@@ -28,6 +30,8 @@ const Home = ({ players }) => {
                 </div>
               ))}
       </section>
+      <img className='ball' src={ball} alt="tennis ball" />
+      </div>
     </main>
   );
 };

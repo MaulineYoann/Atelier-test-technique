@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.scss';
 
-const Search = ({ searchPlayer, setSearchPlayer }) => {
+  const Search = ({ searchPlayer, setSearchPlayer }) => {
   const handleChange = (e) => setSearchPlayer(e.target.value);
 
   return (

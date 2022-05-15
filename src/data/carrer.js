@@ -1,4 +1,4 @@
-export const carrer = [
+export const carrerPlayer = [
   {
     name: 'Novak',
     palmares: {

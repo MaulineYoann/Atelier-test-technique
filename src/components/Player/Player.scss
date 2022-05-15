@@ -23,6 +23,7 @@ a {
       width: 100%;
       .title-name {
         color: #f2753b;
+        font-weight: bold;
       }
       .stats {
         margin-top: 10%;
@@ -37,7 +38,6 @@ a {
           span {
             font-weight: bold;
             display: block;
-            text-align: center;
             color: #f2753b;
             align-self: flex-start;
           }
