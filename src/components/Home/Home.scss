@@ -3,11 +3,11 @@
 
   .container {
     display: flex;
-
     .player-contain {
       margin-top: 20px;
     }
     .ball {
+      align-self: center;
       margin-left: 200px;
       max-height: 500px;
     }
