@@ -35,6 +35,7 @@ const PlayerId = ({ players }) => {
       birthday = 'N/C';
   }
 
+
   return (
     <div className="playerId">
       <Link className="close" to="/">

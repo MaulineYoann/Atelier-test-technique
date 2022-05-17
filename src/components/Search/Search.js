@@ -9,6 +9,7 @@ import './Search.scss';
       name="name"
       value={searchPlayer}
       onChange={handleChange}
+      maxLength={12}
       type="text"
       placeholder="rechercher un joueur"
     />
